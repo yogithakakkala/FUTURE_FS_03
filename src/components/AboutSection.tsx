@@ -1,22 +1,26 @@
+import aboutImg from "@/assets/about-spa.jpg";
+
 const AboutSection = () => {
   return (
     <section id="about" className="spa-section bg-card">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div className="rounded-lg overflow-hidden shadow-xl">
+          <img src={aboutImg} alt="Serenité Spa reception and lounge" className="w-full h-[500px] object-cover" />
+        </div>
         <div>
           <p className="font-body text-sm uppercase tracking-[0.3em] text-primary mb-3">About Us</p>
-          <h2 className="spa-heading text-foreground mb-6">
-            A Sanctuary for<br />Your Soul
-          </h2>
-          <p className="spa-body mb-6">
-            Nestled in the heart of the city, Serenité Spa has been a haven of peace and rejuvenation for over a decade. Our philosophy is rooted in the belief that true beauty comes from within.
+          <h2 className="spa-heading text-foreground mb-6">A Sanctuary for Your Soul</h2>
+          <p className="spa-body mb-5">
+            Nestled in the heart of the city, Serenité Spa has been a haven of peace and rejuvenation for over a decade. Our philosophy is rooted in the belief that true beauty comes from balance — of body, mind, and spirit.
           </p>
           <p className="spa-body mb-8">
-            Our team of certified therapists combines ancient healing traditions with modern wellness techniques to create transformative experiences tailored to your unique needs.
+            Our team of certified therapists combines ancient healing traditions with modern wellness science to deliver transformative experiences. Every product we use is organic, cruelty-free, and sustainably sourced.
           </p>
-          <div className="grid grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-primary">12+</p>
-              <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mt-1">Years Experience</p>
+              <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mt-1">Years</p>
             </div>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-primary">50+</p>
@@ -24,19 +28,14 @@ const AboutSection = () => {
             </div>
             <div className="text-center">
               <p className="font-heading text-3xl font-semibold text-primary">10k+</p>
-              <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mt-1">Happy Clients</p>
+              <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mt-1">Clients</p>
             </div>
           </div>
-        </div>
-        <div className="relative">
-          <div className="bg-secondary rounded-lg aspect-[4/5] flex items-center justify-center">
-            <div className="p-12 text-center">
-              <p className="spa-subheading text-foreground mb-4">"Wellness is not a luxury, it's a necessity."</p>
-              <p className="font-body text-sm text-muted-foreground uppercase tracking-wider">— Our Philosophy</p>
-            </div>
+
+          <div className="bg-secondary rounded-lg p-6">
+            <p className="spa-subheading text-foreground text-xl mb-2">"Wellness is not a luxury, it's a necessity."</p>
+            <p className="font-body text-xs text-muted-foreground uppercase tracking-wider">— Our Philosophy</p>
           </div>
-          <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/20 rounded-full" />
-          <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent/30 rounded-full" />
         </div>
       </div>
     </section>

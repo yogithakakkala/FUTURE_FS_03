@@ -4,20 +4,32 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
-          <div>
+        <div className="grid md:grid-cols-4 gap-10">
+          <div className="md:col-span-1">
             <h3 className="font-heading text-2xl mb-4">Serenité Spa</h3>
             <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
-              Your sanctuary for wellness and beauty. Experience the art of relaxation in our tranquil retreat.
+              Your sanctuary for wellness and beauty. Experience the art of relaxation.
             </p>
           </div>
           <div>
-            <h4 className="font-body text-xs uppercase tracking-widest mb-4 text-primary-foreground/50">Quick Links</h4>
-            <ul className="space-y-3">
-              {["Hair", "Body", "Massage", "About", "Booking"].map((link) => (
+            <h4 className="font-body text-xs uppercase tracking-widest mb-4 text-primary-foreground/50">Services</h4>
+            <ul className="space-y-2">
+              {["Hair Care", "Body Care", "Massages", "Couples Packages"].map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  <a href={`#${link.toLowerCase().replace(/ /g, "")}`} className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-body text-xs uppercase tracking-widest mb-4 text-primary-foreground/50">Quick Links</h4>
+            <ul className="space-y-2">
+              {[{ l: "Specials", h: "#specials" }, { l: "Reviews", h: "#ratings" }, { l: "Book Now", h: "#booking" }, { l: "About", h: "#about" }].map((link) => (
+                <li key={link.l}>
+                  <a href={link.h} className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                    {link.l}
                   </a>
                 </li>
               ))}
