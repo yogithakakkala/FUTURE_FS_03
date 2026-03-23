@@ -1,8 +1,13 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
+import HairCareSection from "@/components/HairCareSection";
+import BodyCareSection from "@/components/BodyCareSection";
+import MassageSection from "@/components/MassageSection";
+import SpecialsSection from "@/components/SpecialsSection";
+import RatingsSection from "@/components/RatingsSection";
 import BookingSection from "@/components/BookingSection";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,9 +15,14 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <ServicesSection />
-      <AboutSection />
+      <HairCareSection />
+      <BodyCareSection />
+      <MassageSection />
+      <SpecialsSection />
+      <RatingsSection />
       <BookingSection />
+      <AboutSection />
+      <ContactSection />
       <Footer />
     </div>
   );

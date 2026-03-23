@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Hair", href: "#hair" },
-  { label: "Body", href: "#body" },
-  { label: "Massage", href: "#massage" },
-  { label: "About", href: "#about" },
+  { label: "Hair Care", href: "#hair" },
+  { label: "Body Care", href: "#body" },
+  { label: "Massages", href: "#massage" },
+  { label: "Specials", href: "#specials" },
+  { label: "Ratings", href: "#ratings" },
   { label: "Booking", href: "#booking" },
+  { label: "Contact", href: "#contact" },
+  { label: "About", href: "#about" },
 ];
 
 const Navbar = () => {
@@ -19,13 +22,12 @@ const Navbar = () => {
           Serenité Spa
         </a>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="font-body text-sm uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="font-body text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -33,9 +35,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
+        <a
+          href="#booking"
+          className="hidden lg:inline-block bg-primary text-primary-foreground px-6 py-2 font-body text-xs uppercase tracking-widest hover:opacity-90 transition-opacity rounded-sm"
+        >
+          Book Now
+        </a>
+
         <button
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -43,10 +51,9 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border animate-fade-in">
-          <ul className="flex flex-col items-center gap-6 py-8">
+        <div className="lg:hidden bg-background border-t border-border animate-fade-in">
+          <ul className="flex flex-col items-center gap-5 py-8">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
